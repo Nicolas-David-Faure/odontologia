@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&family=Luxurious+Script&display=swap');
+
+.logo__container{
+  user-select: none;
+  width: 10rem;
+  height: 10rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  .logo__container-initials{
+
+    height: 80%;
+    position: relative;
+    .logo__initial-letters{
+      position: absolute;
+      font-size: 8rem;
+      font-family: 'Luxurious Script', cursive;
+      top: -60%;
+    }
+    .logo__initial-letters:nth-child(1){
+      font-size: 9rem;
+      left: 0%;
+  
+    }
+    .logo__initial-letters:nth-child(2){
+      top: -40%;
+      left: 40%;
+    }
+  }
+  .logo__container-title{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    .logo__title{
+      font-family: sans-serif;
+      font-weight: 400;
+      font-size: 1rem;
+      letter-spacing: 1.3rem;
+    }
+  }
+}

@@ -3,6 +3,6 @@ import { mainSlice } from "./slice";
 
 export const store = configureStore({
     reducer: {
-        mainDisplaySlice: mainSlice,
+        mainDisplaySlice: mainSlice.reducer,
     },
   })

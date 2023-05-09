@@ -1,0 +1,4 @@
+This project will be created with the stack MERN - Mongo DB , Express, React.js, Node.js
+Is initialized with VITE. Run app with: npm run dev .
+Control global of states with Redux ToolKit.
+

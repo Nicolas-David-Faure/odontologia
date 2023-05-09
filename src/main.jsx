@@ -5,7 +5,7 @@ import { store } from './store/index'
 import { Provider } from 'react-redux'
 
 import App from './App.jsx'
-import './index.css'
+import './assets/styles/_index.scss'
 
 
 ReactDOM.createRoot(document.getElementById('root')).render(
