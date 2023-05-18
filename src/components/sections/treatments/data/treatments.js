@@ -1,0 +1,14 @@
+ const treatments =[
+    {title:'Examen dental y limpieza' , description:'Es el procedimiento básico de cuidado dental. El dentista realiza una evaluación general de la salud bucal, verifica la presencia de caries, realiza radiografías si es necesario y realiza una limpieza profesional para eliminar la placa y el sarro.', image:'' ,id:'tr-1'},
+    {title:'Empaste dental' , description:'También conocido como obturación, es un procedimiento para reparar dientes dañados o con caries. El dentista remueve el área afectada y coloca un material de relleno, como resina compuesta o amalgama, para restaurar la forma y función del diente.', image:'' ,id:'tr-2'},
+    {title:'Extracción dental' , description:'También conocido como obturación, es un procedimiento para reparar dientes dañados o con caries. El dentista remueve el área afectada y coloca un material de relleno, como resina compuesta o amalgama, para restaurar la forma y función del diente.', image:'' ,id:'tr-3'},
+    {title:'Blanqueamiento dental' , description:'Es un tratamiento estético para mejorar el color de los dientes y eliminar las manchas. Puede realizarse en la clínica dental o en casa con productos recomendados por el dentista.', image:'' ,id:'tr-4'},
+    {title:'Coronas dentales' , description:'Son prótesis dentales que cubren completamente un diente dañado o debilitado. Proporcionan fuerza, protección y mejoran la apariencia estética.', image:'' ,id:'tr-5'},
+    {title:'Implantes dentales' , description:'Son dispositivos de titanio que se colocan en el hueso maxilar o mandibular para reemplazar las raíces de los dientes perdidos. Luego, se coloca una corona dental sobre el implante para restaurar la función y apariencia de un diente natural.', image:'' ,id:'tr-6'},
+    {title:'Ortodoncia' , description:'Se utiliza para corregir problemas de alineación y maloclusión dental. Los aparatos ortodónticos, como los brackets o los alineadores transparentes, se utilizan para mover gradualmente los dientes a su posición correcta.', image:'' ,id:'tr-7'},
+    {title:'Tratamiento de conducto' , description:'También conocido como endodoncia, se realiza cuando el tejido interno del diente (pulpa) está infectado o dañado. El dentista retira la pulpa, limpia el conducto radicular y lo sella para prevenir infecciones futuras.', image:'' ,id:'tr-8'},
+    {title:'Cirugía de encías' , description:'Se realiza para tratar enfermedades de las encías, como la periodontitis avanzada. Puede incluir técnicas de reducción de bolsas periodontales, injertos de tejido y cirugía de regeneración ósea.', image:'' ,id:'tr-9'},
+    {title:'Cirugía oral y maxilofacial' , description:' Incluye procedimientos más complejos, como extracción de muelas del juicio impactadas, colocación de implantes dentales complejos, corrección de malformaciones faciales y reconstrucción de mandíbula.', image:'' ,id:'tr-10'},
+  ]
+
+export default treatments;

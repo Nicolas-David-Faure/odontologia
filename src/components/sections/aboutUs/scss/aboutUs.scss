@@ -1,0 +1,12 @@
+@import '../../../../assets/styles/variables';
+
+.aboutUs__main{
+    @include standardSection;
+    
+    .aboutUs__descriptions{
+        width: 90%;
+        height: calc((100% / 3) - 100px);
+        border: 1px solid black;
+    }
+}
+

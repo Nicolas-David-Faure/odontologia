@@ -4,4 +4,24 @@
   $color-paper: #efefef;
   $color-gold-leaf: #d1b280;
   $color-silver: #594d46;
-  
+  $burgundy: #800020;
+  $navy-blue: #000080;
+  $emerald-green: #008000;
+  $quartz-pink: #F7CAC9;
+  $cream: #FFFDD0;
+  $brilliant-silver: #C0C0C0;
+  $mustard-yellow: #FFDB58;
+  $lavender: #E6E6FA;
+
+  //mixin
+
+  @mixin standardSection {
+    width: 100%;
+    height: 150vh;
+    min-height: 150vh;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+  }

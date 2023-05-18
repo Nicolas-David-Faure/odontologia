@@ -1,0 +1,6 @@
+@import '../../../../assets/styles/variables';
+
+.treatments__main{
+    @include standardSection;
+    height: auto;
+}

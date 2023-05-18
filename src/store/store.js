@@ -1,5 +1,5 @@
 import { configureStore } from "@reduxjs/toolkit";
-import { mainSlice } from "./slice";
+import { mainSlice } from "./slice/switchSections";
 
 export const store = configureStore({
     reducer: {
