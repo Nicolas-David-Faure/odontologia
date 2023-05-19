@@ -2,9 +2,12 @@ import React from 'react'
 import './scss/book.scss'
 const Book = () => {
   return (
-    <div>
+    <main className='book__main'>
       <h1>Book</h1>
-    </div>
+      <div className='calendar'>
+        calendar
+      </div>
+    </main>
   )
 }
 

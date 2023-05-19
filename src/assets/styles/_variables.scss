@@ -12,7 +12,8 @@
   $brilliant-silver: #C0C0C0;
   $mustard-yellow: #FFDB58;
   $lavender: #E6E6FA;
-
+  $mint-green:#B6D7A8;
+  $ligth-geen:#A2C8A2;
   //mixin
 
   @mixin standardSection {
@@ -24,4 +25,17 @@
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
+  }
+
+  @mixin defaultBTN{
+      width: 15rem;
+      height: 2.5rem; 
+      font-size: 1.3rem;
+      background-color: $mint-green;
+      border: none;
+      border-radius: 3px;
+      box-shadow: 1px 2px 5px black;
+      
+     
+      cursor: pointer;
   }
