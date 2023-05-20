@@ -9,7 +9,6 @@ const Home = () => {
   return (
     <main className='home__main'>
     <Hero />
-    <hr className='home__divisor'/>
     <Main />
     </main>
   )
