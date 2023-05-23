@@ -1,5 +1,5 @@
 @import '../../../../../assets/styles/variables';
-
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
 .main__container{
   height: 150vh;
   width: 100%;
@@ -23,6 +23,7 @@
     box-shadow: 5px 5px 10px black;
       .main__divisors{   
         box-shadow: 5px 5px 15px rgb(39, 39, 39);
+        font-family: 'Poppins', sans-serif;
       }
       .main__divisors:nth-child(1){
         grid-area: 1 / 1 / 4 / 9;
@@ -32,7 +33,39 @@
       .main__divisors:nth-child(2){
         grid-area: 1 / 9 / 4 / 13;
         border-radius: 0 5px 0 0;
+        background-image: url('../../../../../assets/img/inicio/home/main/smile-fun-girl.jpg');
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
         background-color:$color-gold-leaf;
+        .main__divisor_2_container_frase{
+          width: 50%;
+          height: 100%;
+          padding: 20px;
+          
+          margin-top: 20px;
+          p{
+            font-weight: 700;
+            text-transform: uppercase;
+            font-size: 1.5rem;
+          }
+          .main__button_treatments{
+            
+            width: 10rem;
+            height: 4rem;
+            margin-top: 20px;
+            border-radius: 2px;
+            background-color: $lavender;
+            font-size: 1.3rem;
+            border: none;
+            box-shadow: 1px 2px 5px rgb(145, 145, 145);
+            transition: ease background-color .3s;
+            cursor: pointer;
+          }
+          .main__button_treatments:hover{
+            background-color: $ligth-geen;
+          }
+        }
       }
       .main__divisors:nth-child(3){
         grid-area: 4 / 5 / 7 / 13;
