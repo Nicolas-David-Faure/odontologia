@@ -1,6 +1,7 @@
 import React , { useRef , useEffect , useCallback }from 'react'
 import styled from 'styled-components'
-
+//redux
+import { useSelector } from 'react-redux';
 //Images & Svg
 
 import { ReactComponent as ArrowLeft } from './img/iconmonstr-angel-left-thin.svg'
@@ -11,17 +12,21 @@ import './scss/slideshow.scss'
 
 
 const Slideshow = ( { 
-  children , 
+  children = null, 
   controls = false , 
   autoplay = false ,
-  speedTransition="500" ,
-  speedInterval="5000"
+  speedTransition=500 ,
+  speedInterval=5000
   } ) => {
+  const mainSlice = useSelector((state)=>state.mainDisplaySlice.value)
   const slideshow = useRef(null);
   const slideContainer = useRef(null)
+  
+  const nextImage = useCallback(()=>{
+    
 
-  const nextImage =useCallback(()=>{
     if(slideshow.current.children.length > 0){
+
       const firstElement = slideshow.current.children[0];
       slideshow.current.style.transition = `${speedTransition}ms ease-out all`;
 
@@ -40,7 +45,8 @@ const Slideshow = ( {
       }
 
       slideshow.current.addEventListener('transitionend', transition)
-    }
+    }   
+  
   
   },[speedTransition]);
 
@@ -66,6 +72,7 @@ const Slideshow = ( {
   }
   
 
+/*
   useEffect(()=>{
     if(autoplay){
       let interval = null;
@@ -78,22 +85,25 @@ const Slideshow = ( {
            clearInterval(interval);
         })
   
-  
+       
        slideContainer.current.addEventListener('mouseleave',()=>{
               interval = setInterval(()=>{
-              nextImage();
+              nextImage(); 
           },speedInterval);
         })
     }
 
       },[ speedInterval , autoplay , nextImage ])
-
+      */
+  
   return (
     <section className='slideShow__container'>
       
       <MainContainer ref={slideContainer}>
         <SlideshowContainer ref={slideshow} >
+          
             { children }
+            
         </SlideshowContainer>
            {controls && <Controles>
               <Button onClick={previusImage}><ArrowLeft /></Button>

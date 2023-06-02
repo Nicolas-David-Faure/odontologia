@@ -1,13 +1,16 @@
 import React, { useEffect } from 'react'
+
+import Logo from '../logo/Logo'
 import './scss/footer.scss'
 const Footer = () => {
-  useEffect(()=>{
-    console.log('se renderiza el footer')
-  },[])
+  
 
   return (
     <footer className='footer__main'>
-     <h1 style={{color:'white'}}>esto es el footer</h1>
+      <div></div>
+      <div></div>
+      <div></div>
+     
     </footer>
   )
 }

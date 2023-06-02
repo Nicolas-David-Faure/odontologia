@@ -3,10 +3,89 @@
 .aboutUs__main{
     @include standardSection;
     
-    .aboutUs__descriptions{
+    .aboutUs__containers{
         width: 90%;
-        height: calc((100% / 3) - 100px);
-        border: 1px solid black;
+        height: 400px;
+       
+        display: flex;
+        justify-content: space-evenly;
+        .aboutUs__cont_image{
+            width: 35%;
+            height: 100%;
+            
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+
+        }
+        
+       
+        .aboutUs__cont_description{
+            width: 60%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 0 20px;
+            background: rgb(122,128,195);
+            background: linear-gradient(180deg, rgb(170, 176, 232) 10%, rgba(255,255,255,1) 100%);
+            overflow-y: scroll;
+
+            p{
+                font-size: 1.02rem;
+                text-align: justify;
+                font-family: 'Poppins', sans-serif;
+                font-weight: 500;
+                letter-spacing: .5px;
+            }
+            p:nth-child(1){
+                margin-top: 40px;
+            }
+        }
+        .aboutUs__cont_description::-webkit-scrollbar {
+            width: 7px;
+            border-radius: 10px;
+          }
+         
+      
+      
+          .aboutUs__cont_description::-webkit-scrollbar-track {
+            background: #f1f1f1; 
+            border-radius: 5px;
+          }
+      
+        
+      
+          .aboutUs__cont_description::-webkit-scrollbar-thumb {
+           background: #336a8f;
+            border-radius: 5px;
+          }
+      
+          
+          .aboutUs__cont_description::-webkit-scrollbar-thumb:hover {
+              background: #2477ab; 
+            border-radius: 10px;
+          }
+        .aboutUs__cont_description, .aboutUs__cont_image{
+            border-radius: 3px;
+            box-shadow: 3px 2px 10px rgb(101, 101, 101);
+        }
+    }
+
+    
+    
+    .aboutUs__containers:nth-child(1) > .aboutUs__cont_image{
+        background-image: url('../../../../assets/img/aboutUS/about-img-1.jpg');
+    }
+
+    .aboutUs__containers:nth-child(2) > .aboutUs__cont_image{
+        background-image: url('../../../../assets/img/aboutUS/about-img-2.jpg');
+    }
+    .aboutUs__containers:nth-child(2){
+        flex-direction: row-reverse;
+        p:nth-child(1){
+            margin-top: 20px;
+        }
     }
 }
 

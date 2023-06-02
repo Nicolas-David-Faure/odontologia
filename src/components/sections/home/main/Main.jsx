@@ -1,23 +1,32 @@
 import React from 'react'
+//components
+import Divisor3 from './divisors/Divisor3'
+import Divisor4 from './divisors/Divisor4'
 //redux
+import { useSelector  } from 'react-redux'
 import { useDispatch } from 'react-redux'
 import { defineSection } from '../../../../store/slice/switchSections/mainSlice'
 //slide
 import SlideshowContainer from '../../../slideshow/SlideshowContainer'
 //styles
 import './scss/main.scss'
-const Main = () => {
-  const dispatch = useDispatch();
 
+
+
+const Main = () => {
+
+  const dispatch = useDispatch();
+  const mainSlice = useSelector((state)=>state.mainDisplaySlice.value)
   return (
     <main className='main__container'>
       <div className='main__container_divisors'>
-          <div className="main__divisors">
-          <SlideshowContainer />
+          <div className="main__divisors"> 
+          {mainSlice == 'home' && <SlideshowContainer />}
+          
           </div>
           <div className="main__divisors">
               <div className='main__divisor_2_container_frase'>
-                <p>Conoce todos los tratamientos que tenemos para ofrecerte</p>
+                <p>Conozca todos los tratamientos que tenemos para ofrecerte</p>
               <button 
               onClick={()=>dispatch(defineSection("treatments"))}
               className='main__button_treatments'>Ver tratamientos 
@@ -27,12 +36,10 @@ const Main = () => {
           </div>
           
           <div className="main__divisors">
-              <p>Hola a todos esto es un parrafo para demostrar 
-                que se puede corregir este problema con una simple caja dentro del divisor</p>
+            <Divisor3 />
           </div>
           <div className="main__divisors">
-            <p>Hola a todos esto es un parrafo para demostrar que
-              se puede corregir este problema con una simple caja dentro del divisor</p>
+            <Divisor4 />
           </div>
         </div>
     </main>
