@@ -1,15 +1,18 @@
 import React from 'react'
 import './scss/treatment.scss'
-const Treatment = ( { title , description , img } ) => {
+//Redux
+import { useDispatch } from 'react-redux'
+import { switchTreatment } from '../../../../../store/slice/switchTreatments/treatmentSlice'
+
+const Treatment = ( { title , description , img , id} ) => {
+  const dispatch = useDispatch();
+
   return (
-    <div className='treatment__main'>
-      <h3 className='treatment__title'>{title}</h3>
-      <hr />
-      <p className='treatment__description'>{description}</p>
-      <figure className='treatment__container_image'>
-        <img  className='treatment__image'src={img}/> 
-      </figure>
-    </div>
+    <>
+     <li 
+      onClick={()=>dispatch(switchTreatment(id))}
+      id={id} className='treatment__title'>{title}</li>
+    </>
   )
 }
 

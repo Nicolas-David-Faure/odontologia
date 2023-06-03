@@ -1,30 +1,40 @@
-import React, { useEffect } from 'react'
+import React, { useEffect } from 'react';
 //component
-import Treatment from './childComponets/treatment/Treatment'
-import HeroTreatment from './hero/HeroTreatment'
+import Treatment from './childComponets/treatment/Treatment';
+import HeroTreatment from './hero/HeroTreatment';
+//redux
+import { useSelector } from 'react-redux';
+
+
 //style
-import './scss/treatments.scss'
+import './scss/treatments.scss';
 //data
-import treatments from './data/treatments'
+import treatments from './data/treatments';
 //assets
-import treatmentBanner from '../../../assets/img/treatments/banner.jpg'
+import treatmentBanner from '../../../assets/img/treatments/banner.jpg';
 const Treatments = () => {
-  
-  const displayTreatments =()=>treatments.map(e=>{
+  const treatmentState = useSelector(store=>store.treatmentSlice.treatmentIndexToDisplay)
+
+  const displayTreatments =()=>treatments.map((e,i)=>{
    return <Treatment 
       title={e.title}
-      description={e.description} 
-      img={e.image} 
       key={e.id}
-       />
-  })
-  
-
-  return (
-    <main className='treatments__main'>
-      <HeroTreatment />     
-      <article className='treatments__container_treatment'>
-        {displayTreatments()}
+      id={i}
+      />
+    })
+    
+    {/*  <HeroTreatment />  */}   
+    
+    return (
+      <main className='treatments__main'>
+      <nav className='treatments__nav'>
+        <ul className='treatments__ul'>
+         {displayTreatments()}
+        </ul>
+      </nav>
+      <article className='treatments__content'>
+          <h1>{treatments[treatmentState].title}</h1>
+          <p>{treatments[treatmentState].description}</p>
       </article>
     </main>
   )

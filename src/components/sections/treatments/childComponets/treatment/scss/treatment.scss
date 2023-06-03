@@ -1,31 +1,17 @@
 @import '../../../../../../assets/styles/variables';
-.treatment__main{
-    width: 30%;
-    min-height: 200px;
-    box-shadow: 1px 2px 5px rgb(91, 91, 91);
-    border-radius: 5px;
-    margin: 5px 0;
-    background-color: #f4c49c;
-    padding: 5px;
-   
-    .treatment__title{
-        text-align: center;
-        font-family: Helvetica, sans-serif;
-        font-size: 1.3rem;
-        text-shadow: 2px 2px 5px rgb(222, 155, 110);
-        color: rgb(47, 47, 47);
-    } 
-    hr{
-        background-color: $color-silver;
-        height: 2px;
-        border: none;
-        border-radius: 10px;
-        margin-bottom: 5px;
-    }
-    .treatment__description{
-        font-size: 1.2rem;
-        text-align: left;
-        letter-spacing: 1;
-        color: rgb(43, 43, 43);
-    }
+.treatment__title{
+  list-style: none;
+  font-family: 'Poppins', sans-serif;
+  color: $color-paper;
+  font-size: 1.2rem;
+cursor: pointer;
+    width: 100%;
+    display: grid;
+    place-content: center;
+    height: 10%;
+    transition: ease all .3s;
+  }
+  .treatment__title:hover{
+    background-color: rgba(0, 0, 0, 0.142);
+    color: white;
 }
