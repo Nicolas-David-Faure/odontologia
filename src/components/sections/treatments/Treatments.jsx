@@ -33,8 +33,8 @@ const Treatments = () => {
         </ul>
       </nav>
       <article className='treatments__content'>
-          <h1>{treatments[treatmentState].title}</h1>
-          <p>{treatments[treatmentState].description}</p>
+          <h1>{treatmentState !== null ?  treatments[treatmentState].title : "ES NULO"}</h1>
+          <p>{treatmentState !== null ? treatments[treatmentState].description : "ES NULO"}</p>
       </article>
     </main>
   )
