@@ -9,7 +9,7 @@ import imgTools from '../../../../../assets/img/inicio/home/main/img-tool.jpg'
 import arrowDown from '../../../../../assets/img/inicio/home/main/icons/iconmonstr-arrow-31.svg'
 const Divisor3 = () => {
     const [animateArrow , setAnimateArrow] = useState(false) 
-
+    const [showTitle, setShowTitle] = useState(false)
    const transformArrow = {
     arrowUp: {
         transform: 'rotate(180deg)',
@@ -18,6 +18,7 @@ const Divisor3 = () => {
             type:"spring",
             bounce:0.5
           }
+
     },
 
     arrowDown:{
@@ -36,8 +37,18 @@ const Divisor3 = () => {
             <motion.figure
            
             className='divisor3__container__branch_img-description'>
-                    <img src={imgTools} alt='This images shows dentist tools'>
+                    <img
+                    
+                    src={imgTools} alt='This images shows dentist tools'>
                     </img>
+                    <motion.div
+                     className='divisor3__cont_title'
+                     initial={{y:20}}
+                     animate={showTitle ? {color:'#000000',y:0,transition:{duration:.3,type:'spring'}} : {color:'transparent',y:20,transition:{duration:.3,type:'spring'}}}
+                     >
+                        <h3 className='divisor3__title'>Descripcion de herramientas</h3>
+                    </motion.div>
+                   <div className='divisor3__cont_btn_arrowIcon'>
                     <motion.button
                         onClick={()=>setAnimateArrow(!animateArrow)}
                         initial={{
@@ -50,9 +61,15 @@ const Divisor3 = () => {
                         variants={transformArrow}
                         className='divisor3__btn_arrowIcon'> 
                          <motion.img 
-                         whileHover={{scale:1.5}}
+                            whileHover={{scale:1.5}}
+                            onHoverStart={()=>{setShowTitle(true)}}
+                            onHoverEnd={()=>{setShowTitle(false)}}
+                    
                          src={arrowDown}  />
-                    </motion.button>  
+                    </motion.button>
+                   </div>
+
+
             </motion.figure>
         <motion.div 
         

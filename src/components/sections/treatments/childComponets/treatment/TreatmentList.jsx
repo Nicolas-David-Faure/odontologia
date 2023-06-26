@@ -1,10 +1,10 @@
 import React from 'react'
-import './scss/treatment.scss'
+import './scss/treatmentList.scss'
 //Redux
 import { useDispatch } from 'react-redux'
 import { switchTreatment } from '../../../../../store/slice/switchTreatments/treatmentSlice'
 
-const Treatment = ( { title , description , img , id} ) => {
+const TreatmentList = ( { title , description , img , id} ) => {
   const dispatch = useDispatch();
 
   return (
@@ -16,4 +16,4 @@ const Treatment = ( { title , description , img , id} ) => {
   )
 }
 
-export default Treatment
+export default TreatmentList

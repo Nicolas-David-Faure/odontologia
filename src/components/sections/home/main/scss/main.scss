@@ -10,7 +10,7 @@
   align-items: center;
   .main__container_divisors{
     color: black;
-    width: 98%;
+    width: 99%;
     height: 100%;
     display: grid;
     grid-template-columns:repeat(12,1fr);
@@ -18,9 +18,9 @@
     gap: 20px;
     margin-bottom: 20px;
     padding: 5px;
-    background-color: $color-black-steel;
-    border-radius: 5px;
-    box-shadow: 5px 5px 10px black;
+    background-color: $light-blue;
+    border-radius: 2px;
+    box-shadow: 5px 5px 10px rgb(119, 109, 109);
       .main__divisors{   
         box-shadow: 5px 5px 15px rgb(39, 39, 39);
         font-family: 'Poppins', sans-serif;

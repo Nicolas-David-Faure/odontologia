@@ -1,7 +1,7 @@
 import { createSlice } from '@reduxjs/toolkit';
 
 const initialState = {
-  treatmentIndexToDisplay: null,
+  treatmentIndexToDisplay: 0,
 }
 
 export const treatmentSlice = createSlice({
