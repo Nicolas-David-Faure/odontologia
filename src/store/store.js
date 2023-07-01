@@ -8,4 +8,4 @@ export const store = configureStore({
         treatmentSlice: treatmentSlice.reducer,
     },
   })
-  /*pequeño cambio*/
+/*pequeño cambio*/

@@ -70,6 +70,8 @@
     transition: ease background-color 0.2s;
     font-size: 1.1rem;
     padding: 5px;
+    background-color: $light-blue;
+    color: black;
   }
   .form__textArea:focus{
     background-color: $lavender; 

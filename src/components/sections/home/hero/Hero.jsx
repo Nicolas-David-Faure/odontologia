@@ -1,7 +1,9 @@
 import React from 'react'
 //redux
 import { useDispatch } from 'react-redux'
-import { defineSection } from '../../../../store/slice/switchSections/mainSlice'
+import { defineSection , underlineSelectedItem} from '../../../../store/slice/switchSections/mainSlice'
+//navName
+import { navName } from '../../../../store/slice/switchSections/navName'
 //styles
 import './scss/hero.scss'
 const Hero = () => {
@@ -16,7 +18,10 @@ const Hero = () => {
          <br/>Y <strong>si ya no le quedan</strong>... 
         <br/>¡Nosotros le <strong>colocamos</strong> unos <strong>nuevos!</strong></p>
         <button 
-        onClick={()=>dispatch(defineSection("book"))}
+        onClick={()=>{
+          dispatch(underlineSelectedItem(navName[3]))
+          dispatch(defineSection("book"))
+        }}
         className='hero__button'>Agendar Cita</button>
         </div>
        

@@ -5,12 +5,13 @@ import Divisor4 from './divisors/Divisor4'
 //redux
 import { useSelector  } from 'react-redux'
 import { useDispatch } from 'react-redux'
-import { defineSection } from '../../../../store/slice/switchSections/mainSlice'
+import { defineSection , underlineSelectedItem } from '../../../../store/slice/switchSections/mainSlice'
 //slide
 import SlideshowContainer from '../../../slideshow/SlideshowContainer'
 //styles
 import './scss/main.scss'
-
+//navName
+import { navName } from '../../../../store/slice/switchSections/navName'
 
 
 const Main = () => {
@@ -28,7 +29,10 @@ const Main = () => {
               <div className='main__divisor_2_container_frase'>
                 <p>Conozca todos los tratamientos que tenemos para ofrecerte</p>
               <button 
-              onClick={()=>dispatch(defineSection("treatments"))}
+              onClick={()=>{
+                dispatch(underlineSelectedItem(navName[2]))
+                dispatch(defineSection("treatments"))
+              }}
               className='main__button_treatments'>Ver tratamientos 
               </button>
               </div> 
