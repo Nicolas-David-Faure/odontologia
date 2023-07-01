@@ -19,8 +19,13 @@ const Hero = () => {
         <br/>¡Nosotros le <strong>colocamos</strong> unos <strong>nuevos!</strong></p>
         <button 
         onClick={()=>{
+         
           dispatch(underlineSelectedItem(navName[3]))
           dispatch(defineSection("book"))
+          window.scrollTo({
+            top: 190,
+            behavior: 'smooth'
+          });
         }}
         className='hero__button'>Agendar Cita</button>
         </div>

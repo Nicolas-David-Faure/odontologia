@@ -20,6 +20,7 @@ const NavBar = () => {
         {
           navName.map(( item )=>(
             <li className={item === selected ? 'nav__lists selected' : 'nav__lists' }
+            id='#nav_bar'
             key={item.action}
             onClick={()=>(
               dispatch(underlineSelectedItem(item)),
