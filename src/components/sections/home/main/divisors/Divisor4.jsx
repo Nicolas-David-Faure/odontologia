@@ -20,8 +20,10 @@ const Divisor4 = () => {
                 top: 190,
                 behavior: 'smooth'
               });
-              dispatch(underlineSelectedItem(navName[3]))
-              dispatch(defineSection('book'))
+              setTimeout(()=>{
+                dispatch(underlineSelectedItem(navName[3]))
+                dispatch(defineSection('book'))
+              },500)
               }}>Agenda una cita</button>
         </div>   
         <div className='divisor4__cont_title'>
@@ -31,8 +33,10 @@ const Divisor4 = () => {
                 top: 190,
                 behavior: 'smooth'
               });
-              dispatch(underlineSelectedItem(navName[4]))
-              dispatch(defineSection('contact'))
+              setTimeout(()=>{
+                dispatch(underlineSelectedItem(navName[4]))
+                dispatch(defineSection('contact'))
+              },500)
               }}>Contáctanos</button>
         </div>
     </section>

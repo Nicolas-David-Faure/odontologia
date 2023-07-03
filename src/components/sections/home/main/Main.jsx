@@ -30,8 +30,15 @@ const Main = () => {
                 <p>Conozca todos los tratamientos que tenemos para ofrecerte</p>
               <button 
               onClick={()=>{
-                dispatch(underlineSelectedItem(navName[2]))
-                dispatch(defineSection("treatments"))
+                window.scrollTo({
+                  top: 190,
+                  behavior: 'smooth'
+                });
+                setTimeout(()=>{
+                  dispatch(underlineSelectedItem(navName[2]))
+                  dispatch(defineSection("treatments"))
+                },500)
+                
               }}
               className='main__button_treatments'>Ver tratamientos 
               </button>
