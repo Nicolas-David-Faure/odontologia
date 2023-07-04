@@ -16,8 +16,8 @@ const Footer = () => {
   return (
     <footer className='footer__main'>
       <div className='footer__main_divisors'>
-        <Footer_divisor1 />
         <Footer_divisor2 />
+        <Footer_divisor1 />
       </div>
      <div className='footer__main_cont-copyright'> 
        &#169;2023 Clínica Dental XYZ. Todos los derechos reservados.
