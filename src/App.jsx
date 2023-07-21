@@ -23,7 +23,7 @@ import { useSelector  } from 'react-redux'
 
 function App() {
   const mainSlice = useSelector((state)=>state.mainDisplaySlice.value)
- 
+  
 
     const switchMainContent =()=>{
         switch(mainSlice){
