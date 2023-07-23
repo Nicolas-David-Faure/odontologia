@@ -2,5 +2,6 @@
 
 .book__main{
   @include standardSection;
-  
+  justify-content: flex-start;
+  font-family: 'Poppins', sans-serif;
 }

@@ -1,18 +1,39 @@
 import React from 'react'
-//componentes
-import WishToContinue from './appBookComponents/wishToContinue/WishToContinue'
-//styles
-import './scss/appBook.scss'
 //redux
 import { useSelector } from 'react-redux'
 
+//styles
+import './scss/appBook.scss'
+
+//components
+import WishToContinue from './appBookComponents/wishToContinue/WishToContinue' // step 0
+import FirtsInfo from './appBookComponents/firstInformation/FirtsInfo' // step 1
+
 const AppBook = () => {
-  const appBookValue= useSelector((state)=> state.appBookSlice.valueStep)
-  console.log(appBookValue)
+  const appBookValue= useSelector((state)=> state.appBookSlice.valueStep) // Bring the value step 
+  
+
+  const bookSwitchStep = (valueStep) => {
+
+    switch (valueStep) {
+      case 0:
+          return <WishToContinue />
+      case 1:
+          return <FirtsInfo />
+      case 2:
+        
+      case 3:
+    
+      default:
+        break;
+    }
+
+
+  }
   return (
     
     <main className='appBook__main'>
-      <WishToContinue />
+      {bookSwitchStep(appBookValue)}
     </main>
   )
 }

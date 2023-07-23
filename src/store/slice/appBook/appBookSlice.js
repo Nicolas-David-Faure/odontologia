@@ -5,7 +5,8 @@ import { createSlice } from '@reduxjs/toolkit'
 export const appBookSlice = createSlice({
   name: 'appBook',
   initialState:{
-   valueStep: 0,
+   valueStep: 1,
+   sureToExit:false,
   },
   reducers: {
     nextStep: (state)=>{
@@ -19,9 +20,12 @@ export const appBookSlice = createSlice({
     ,
     resetSteps: state =>{
       state.valueStep = 0
+      state.sureToExit = false
+    },
+    warningSureToExit: (state)=>{
+      state.sureToExit = !state.sureToExit
     }
 
-  
     // getValueStep: (state )=>{
     //   return state.valueStep
     // }
@@ -30,4 +34,4 @@ export const appBookSlice = createSlice({
 })
 
 // Action creators are generated for each case reducer function
-export const { nextStep , backStep , resetSteps  } = appBookSlice.actions
+export const { nextStep , backStep , resetSteps , warningSureToExit } = appBookSlice.actions
