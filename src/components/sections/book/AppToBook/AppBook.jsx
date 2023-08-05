@@ -7,11 +7,12 @@ import './scss/appBook.scss'
 
 //components
 import WishToContinue from './appBookComponents/wishToContinue/WishToContinue' // step 0
-import FirtsInfo from './appBookComponents/firstInformation/FirtsInfo' // step 1
+import FirtsInfo from './appBookComponents/firstInfo/FirtsInfo' // step 1
+import SecondInfo from './appBookComponents/secondInfo/SecondInfo' //step 2
+import ThirdInfo from './appBookComponents/thirdInfo/ThirdInfo'   //step 3
 
 const AppBook = () => {
   const appBookValue= useSelector((state)=> state.appBookSlice.valueStep) // Bring the value step 
-  
 
   const bookSwitchStep = (valueStep) => {
 
@@ -21,9 +22,9 @@ const AppBook = () => {
       case 1:
           return <FirtsInfo />
       case 2:
-        
+          return <SecondInfo />
       case 3:
-    
+          return <ThirdInfo />
       default:
         break;
     }

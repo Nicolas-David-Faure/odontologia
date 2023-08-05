@@ -34,6 +34,9 @@
     justify-content: space-evenly;
     align-items: center;
 
+    button{
+      @include appBookBTN
+    }
     button:nth-child(1){
       background-color: rgb(146, 100, 100);
     }

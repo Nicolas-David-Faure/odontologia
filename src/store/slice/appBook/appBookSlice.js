@@ -7,6 +7,18 @@ export const appBookSlice = createSlice({
   initialState:{
    valueStep: 1,
    sureToExit:false,
+
+   userInfo: {
+    name:'',
+    lastName:'',
+    age:'15',
+    reasons: [],
+    email:'',
+    phoneNumber:'',
+    plusInfo:'',
+    more_info: false
+   }
+
   },
   reducers: {
     nextStep: (state)=>{
@@ -24,14 +36,18 @@ export const appBookSlice = createSlice({
     },
     warningSureToExit: (state)=>{
       state.sureToExit = !state.sureToExit
-    }
+    },
 
-    // getValueStep: (state )=>{
-    //   return state.valueStep
-    // }
+    setUserInfo: ({userInfo}, {payload})=>{
+     
+      for(let key in payload){
+        userInfo[key] = payload[key]
+      }
+      console.log(userInfo) 
+    }
 
   },
 })
 
 // Action creators are generated for each case reducer function
-export const { nextStep , backStep , resetSteps , warningSureToExit } = appBookSlice.actions
+export const { nextStep , backStep , resetSteps , warningSureToExit , setUserInfo} = appBookSlice.actions

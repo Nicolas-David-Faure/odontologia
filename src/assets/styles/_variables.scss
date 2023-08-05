@@ -16,6 +16,10 @@
   $ligth-geen:#A2C8A2;
   $skin:#ffe1c9;
   $light-blue: rgb(207, 207, 232);
+  $light-red:rgb(252, 102, 102);
+  $green-succes:rgb(35, 177, 66);
+
+  $input-color: rgb(228, 192, 138);
   
   //mixin
 
@@ -41,4 +45,18 @@
       
      
       cursor: pointer;
+  }
+  @mixin appBookBTN{
+    margin-top: 50px;
+    width: 8rem;
+    height: 4rem;
+    font-size: 1rem;
+    color: black;
+    padding: 10px;
+    font-weight: 500;
+    background-color: $mint-green;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    box-shadow: 3px 2px 10px rgb(73, 71, 71);
   }

@@ -7,18 +7,20 @@
 
   flex-direction:column;
   align-items: center;
-  h3 , p{
-      
-    text-align: center;
+   p{
+    padding: 0 20px;
+    text-align: start;
   }
   h3{
-    margin-top: 50px;
+    margin: 20px 0;
+    text-decoration: underline;
+    text-align: center;
   }
   .appBook__main_div_continue{
     width: 90%;
     height: 50%;
 
-    background-color: $skin;
+    background-color: $lavender;
     border-radius: 2px;
     margin-top: 2rem;
     display: flex;
@@ -29,29 +31,17 @@
     .appBook__main_div_continue_cont-btn{
       width: 80%;
       height: 50%;
-      
-
       display: flex;
       justify-content: space-evenly;
-      
+
       button{
-        margin-top: 50px;
-        width: 8rem;
-        height: 4rem;
-        font-size: 1rem;
-        color: black;
-        padding: 10px;
-        font-weight: 500;
-        background-color: $color-gold-leaf;
-        border: none;
-        border-radius: 3px;
-        cursor: pointer;
+        @include appBookBTN
       }
       button:hover:nth-child(1){
-        background-color: rgb(36, 187, 104);
+        background-color: $light-red;
       }
       button:hover:nth-child(2){
-        background-color: #e6644d;
+        background-color: $green-succes;
       }  
     }
     
