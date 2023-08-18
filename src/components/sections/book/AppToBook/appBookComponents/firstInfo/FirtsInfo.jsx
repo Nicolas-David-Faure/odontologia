@@ -23,6 +23,8 @@ const FirtsInfo = () => {
   const setInfo = (event)=>{
     const eventName = event.target.name;
     const eventValue = event.target.value;
+
+
     setFirstUserInfo({
       ...firstUserInfo,
       [eventName]: eventValue
@@ -83,9 +85,7 @@ const FirtsInfo = () => {
         <label className='firstInfo__labels' htmlFor="">
           <input 
           value={firstUserInfo.age}
-          onChange={(event)=>{
-            setInfo(event)
-          }} 
+          onChange={(event)=>setInfo(event)} 
           name='age' 
           type="number" 
           placeholder='Edad'

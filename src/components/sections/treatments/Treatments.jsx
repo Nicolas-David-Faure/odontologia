@@ -11,7 +11,7 @@ import treatments from './data/treatments';
 import treatmentBanner from '../../../assets/img/treatments/banner.jpg';
 
 const Treatments = () => {
-  const displayTreatments =()=>treatments.map((e,i)=>{
+  const displayTreatments = treatments.map((e,i)=>{
    return <TreatmentList 
       title={e.title}
       key={e.id}
@@ -19,16 +19,21 @@ const Treatments = () => {
       />
     })
     
-    {/*  <HeroTreatment />  */}   
+    {/*    */}   
     
     return (
       <main className='treatments__main'>
-      <nav className='treatments__nav'>
-        <ul className='treatments__ul'>
-         {displayTreatments()}
-        </ul>
-      </nav>
-     <TreatmentDescription />
+      <HeroTreatment />
+      
+
+      <article>
+        <nav className='treatments__nav'>
+          <ul className='treatments__ul'>
+            {displayTreatments}
+          </ul>
+        </nav>
+        <TreatmentDescription />
+      </article>
     </main>
   )
 }

@@ -36,13 +36,18 @@ const SecondInfo = () => {
 
   return (
     <div className='secondInfo_main'>
-        <h3>Muy bien { name }</h3>
+        <h3>Muy bien { name.split(' ')[0] }</h3>
         <p>Ahora selecciona cuales son los motivos principales de tu visita 😬</p>
 
       <div className='secondInfo_cont-selectors'>
-        {dataSecondInfo.map(({ content , id }, index)=>
-          <SecondInfo_cont_input_label handleInfo={setInfo} key={index} content={content} id={id} index={index + 1} />
-        )}
+        {
+         dataSecondInfo.map(({ content , id }, index)=>
+          <SecondInfo_cont_input_label 
+                  handleInfo={setInfo} key={index} 
+                  content={content} 
+                  id={id} 
+                  index={index + 1} />)
+        }
       </div>
 
       <div className='secondInfo__cont-btn'>
@@ -55,9 +60,9 @@ const SecondInfo = () => {
 
 const SecondInfo_cont_input_label = ( { handleInfo , content , id , index } )=>{
   const { reasons = [] } = useSelector(state=>state.appBookSlice.userInfo)
-  
+
   return (
-    <article className='secondInfo_cont-input-label'>
+    <li className='secondInfo_cont-input-label'>
       <div className='secondInfo_cont-input'>
           <input 
             defaultChecked={reasons.includes(content) ? true : false} 
@@ -67,7 +72,7 @@ const SecondInfo_cont_input_label = ( { handleInfo , content , id , index } )=>{
             id={id + index} />
       </div>
       <label htmlFor={id + index} >{content}</label>
-    </article>
+    </li>
   )
 }
 export default SecondInfo

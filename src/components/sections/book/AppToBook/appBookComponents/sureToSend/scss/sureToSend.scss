@@ -1,0 +1,49 @@
+@import '../../../../../../../assets/styles/variables';
+
+.sureToSend__main{
+  width: 100%;
+  height: 100%;
+
+  padding: 20px;
+  overflow-y: scroll;
+  .sureToSend__title{
+    text-align: center;
+    text-decoration: underline;
+  }
+  .sureToSend__description{
+    margin: 20px;
+  }
+  .sureToSend__main_p{
+    background-color: $lavender;
+    width: 100%;
+    padding: 20px;
+    ul{
+      margin: 0;
+      width: 100%;
+      padding: 20px;
+      li{
+        margin: 10px 0 0 50px;
+      }
+    }
+    p{
+      margin: 20px;
+    }
+  }
+
+  .sureToSend__main-btn{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+
+      button{
+          @include appBookBTN
+        }
+      button:hover:nth-child(1){
+        background-color: $light-red;
+      }
+      button:hover:nth-child(2){
+        background-color: $green-succes;
+      }  
+  }
+}

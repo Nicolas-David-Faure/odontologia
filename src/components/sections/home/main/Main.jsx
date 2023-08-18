@@ -15,15 +15,14 @@ import { navName } from '../../../../store/slice/switchSections/navName'
 
 
 const Main = () => {
-
   const dispatch = useDispatch();
   const mainSlice = useSelector((state)=>state.mainDisplaySlice.value)
+
   return (
     <main className='main__container'>
       <div className='main__container_divisors'>
           <div className="main__divisors"> 
-          {mainSlice == 'home' && <SlideshowContainer />}
-          
+            {mainSlice == 'home' && <SlideshowContainer />}
           </div>
           <div className="main__divisors">
               <div className='main__divisor_2_container_frase'>

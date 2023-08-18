@@ -5,13 +5,13 @@ import { createSlice } from '@reduxjs/toolkit'
 export const appBookSlice = createSlice({
   name: 'appBook',
   initialState:{
-   valueStep: 1,
+   valueStep: 0,
    sureToExit:false,
 
    userInfo: {
     name:'',
     lastName:'',
-    age:'15',
+    age:'',
     reasons: [],
     email:'',
     phoneNumber:'',
@@ -31,19 +31,22 @@ export const appBookSlice = createSlice({
                   console.log("You can't go less than 0")}
     ,
     resetSteps: state =>{
-      state.valueStep = 0
-      state.sureToExit = false
+      state.valueStep = 0;
+      state.sureToExit = false;
+      state.userInfo = {}
+
+      console.log(state.userInfo)
     },
     warningSureToExit: (state)=>{
       state.sureToExit = !state.sureToExit
     },
 
     setUserInfo: ({userInfo}, {payload})=>{
-     
+
       for(let key in payload){
         userInfo[key] = payload[key]
       }
-      console.log(userInfo) 
+    
     }
 
   },

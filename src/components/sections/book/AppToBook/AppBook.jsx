@@ -10,10 +10,11 @@ import WishToContinue from './appBookComponents/wishToContinue/WishToContinue' /
 import FirtsInfo from './appBookComponents/firstInfo/FirtsInfo' // step 1
 import SecondInfo from './appBookComponents/secondInfo/SecondInfo' //step 2
 import ThirdInfo from './appBookComponents/thirdInfo/ThirdInfo'   //step 3
+import SureToSend from './appBookComponents/sureToSend/SureToSend'
 
 const AppBook = () => {
   const appBookValue= useSelector((state)=> state.appBookSlice.valueStep) // Bring the value step 
-
+  console.log(appBookValue)
   const bookSwitchStep = (valueStep) => {
 
     switch (valueStep) {
@@ -25,6 +26,8 @@ const AppBook = () => {
           return <SecondInfo />
       case 3:
           return <ThirdInfo />
+      case 4:
+          return <SureToSend />
       default:
         break;
     }
@@ -32,7 +35,7 @@ const AppBook = () => {
 
   }
   return (
-    
+
     <main className='appBook__main'>
       {bookSwitchStep(appBookValue)}
     </main>

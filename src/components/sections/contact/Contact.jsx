@@ -6,7 +6,7 @@ import './scss/contact.scss'
 const Contact = () => {
   return (
     <main className='contact__main'>
-      <h1>CONTACTOS</h1>
+ 
 
      <Form />
     </main>

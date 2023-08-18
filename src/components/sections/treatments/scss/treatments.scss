@@ -2,12 +2,16 @@
 
 .treatments__main{
   @include standardSection;
-height: auto;
-min-height: 100vh;
-flex-direction: row;
+    height: auto;
+    min-height: 100vh;
+
     justify-content: space-evenly;
     align-items: flex-start;
 
+    article{
+      width: 100%;
+      display: flex;
+    }
     .treatments__nav{
       border-radius: 3px;
       margin: 30px 0px 30px 30px;

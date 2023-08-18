@@ -16,7 +16,7 @@ const Slideshow = ( {
   controls = false , 
   autoplay = false ,
   speedTransition=500 ,
-  speedInterval=5000
+  speedInterval=1000
   } ) => {
   const mainSlice = useSelector((state)=>state.mainDisplaySlice.value)
   const slideshow = useRef(null);
@@ -70,31 +70,27 @@ const Slideshow = ( {
 
     }
   }
-  
 
-/*
-  useEffect(()=>{
-    if(autoplay){
-      let interval = null;
-        interval = setInterval(()=>{
-        
-              nextImage();
-        },speedInterval);
-        
-        slideContainer.current.addEventListener('mouseenter',()=>{
-           clearInterval(interval);
-        })
-  
-       
-       slideContainer.current.addEventListener('mouseleave',()=>{
-              interval = setInterval(()=>{
-              nextImage(); 
-          },speedInterval);
-        })
-    }
 
-      },[ speedInterval , autoplay , nextImage ])
-      */
+  // useEffect(()=>{
+  //   if(autoplay){
+  //     let interval = null;
+  //       interval = setInterval(()=>{
+  //             nextImage();
+  //       },speedInterval);
+        
+  //       slideContainer.current.addEventListener('mouseenter',()=>{
+  //          clearInterval(interval);
+  //       })
+
+  //      slideContainer.current.addEventListener('mouseleave',()=>{
+  //             interval = setInterval(()=>{
+  //             nextImage(); 
+  //         },speedInterval);
+  //       })
+  //   }
+
+  //     },[ speedInterval , autoplay , nextImage ])
   
   return (
     <section className='slideShow__container'>
