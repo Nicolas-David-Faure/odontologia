@@ -5,6 +5,8 @@ import { useSelector } from 'react-redux';
 import treatments from '../../data/treatments';
 //STYLES
 import './scss/treatmentDescription.scss';
+import TreatmentNav from './TreatmentNav';
+
 const TreatmentDescription = () => {
   const treatmentState = useSelector(store=>store.treatmentSlice.treatmentIndexToDisplay)
 
@@ -27,22 +29,25 @@ const TreatmentDescription = () => {
     return <div>Cargando imagen...</div>;
   }
   return (
-    <article className='treatmentDescription__main'>
-      <div className='treatmentDescription__cont_title'>
-        <h2 className='treatmentDescription__title'>
-            {treatmentState !== null ? 
-           treatments[treatmentState].title : "ES NULO"}</h2>
+    <section className='treatmentDescription__main'>
+        <TreatmentNav />
+      <article className='treatmentDescription__article'>
 
-          <p className='treatmentDescription__description'>
-            {treatmentState !== null ?
-           treatments[treatmentState].description : "ES NULO"}</p>
-      </div>
-      <figcaption className='treatmentDescription__cont_image'>
-           <img className='treatmentDescription__image' 
-         src={imagen} alt={imagen} />
-      </figcaption>
-          
-      </article>
+        <div className='treatmentDescription__cont_title'>
+          <h2 className='treatmentDescription__title'>
+              {treatmentState !== null ? 
+             treatments[treatmentState].title : "ES NULO"}</h2>
+
+            <p className='treatmentDescription__description'>
+              {treatmentState !== null ?
+             treatments[treatmentState].description : "ES NULO"}</p>
+        </div>
+        <figcaption className='treatmentDescription__cont_image'>
+             <img className='treatmentDescription__image' 
+           src={imagen} alt={imagen} />
+        </figcaption>
+        </article>
+    </section>
   )
 }
 

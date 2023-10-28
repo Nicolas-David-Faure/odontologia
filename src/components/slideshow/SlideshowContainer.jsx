@@ -16,7 +16,7 @@ const SlideshowContainer = () => {
   return (
     <>
       {
-      <Slideshow controls={true} autoplay={true} speedTransition="500" speedInterval="10000">
+      <Slideshow controls={true} autoplay={true} speedTransition="500" speedInterval="1000">
       <Slide>
         <img style={{height:'100%'}} src={img1} alt="" />
       
@@ -42,6 +42,7 @@ const SlideshowContainer = () => {
            sino que también te brindan orientación y educación para mantener una sonrisa saludable a largo plazo.</p>
       </TextSlide>
     </Slide>
+
     <Slide>
     
         <img style={{height:'100%'}} src={img4} alt="" />

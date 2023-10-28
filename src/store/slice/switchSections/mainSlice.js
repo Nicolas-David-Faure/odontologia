@@ -2,10 +2,9 @@ import { createSlice } from '@reduxjs/toolkit'
 import { navName } from './navName'
 
 
-
-
 export const mainSlice = createSlice({
   name: 'stwitchSection',
+
   initialState:{
   value: "home",
   alueKeySection :{
