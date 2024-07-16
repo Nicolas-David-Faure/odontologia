@@ -28,6 +28,8 @@ const TreatmentDescription = () => {
   if (!imagen) {
     return <div>Cargando imagen...</div>;
   }
+
+  console.log(treatmentState)
   return (
     <section className='treatmentDescription__main'>
         <TreatmentNav />
